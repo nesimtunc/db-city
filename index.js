@@ -44,7 +44,7 @@
     api.find.meta={};
     api.find.meta.props=['country','name','nameAccent','region','population','lat','long'];
     api.find.meta.cmdBuilder=function(v){
-        return `grep -i "\\b${v}*\\w" ${__dirname}/db/worldcitiespop.txt`;
+        return `grep -i "\\b${v}\\w*" ${__dirname}/db/worldcitiespop.txt`;
     };
      m.exports=api;
 })({},module,require('node-etl'),require('child_process'))
